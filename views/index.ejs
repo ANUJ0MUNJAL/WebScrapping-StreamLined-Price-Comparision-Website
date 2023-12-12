@@ -1,0 +1,107 @@
+<!-- index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Product Price Search</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBv3TUUnF1pMqr5ef9f5J1FvGwwA"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <style>
+    /* Add your custom styles here */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Ubuntu&display=swap');
+
+    body {
+      font-family: "Montserrat";
+      background: linear-gradient(to right bottom, #fbdb89, #f48982); /* Set the gradient background */
+      margin: 0;
+      padding: 0;
+    }
+    .try{
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  background:linear-gradient(to right bottom, #fbdb89, #f48982);
+}
+    h1 {
+      font-family: "Montserrat-light";
+      font-size: 3rem;
+      line-height: 1.5;
+      text-align: center;
+      padding: 3% 0;
+    }
+
+    form {
+      text-align: center;
+      margin: 2% auto;
+    }
+
+    input {
+      width: 60%;
+      padding: 1rem;
+      border-radius: 9px;
+      border: none;
+      margin-right: 1%;
+    }
+
+    button {
+      /* background: linear-gradient(to right bottom, #fbdb89, #f48982);Set the gradient background */
+      color: #fdf2e9;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right bottom, #fbdb89, #f48982); /* Set the gradient background */
+      /* color: #f48982; */
+    }
+
+    #results {
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+   <div class="try">
+    <h1>Product Price Search</h1>
+
+    <!-- Form for search input and button -->
+    <form action="/search" method="post">
+      <!-- Input field for entering the search term -->
+      <input type="text" id="searchTerm" name="searchTerm" placeholder="Enter a product">
+  
+      <!-- Button to submit the form and trigger the search -->
+      <button type="submit" style="background-color: black;">Search</button>
+    </form>
+  
+    <!-- Container to display the search results -->
+    <div id="results"></div>
+    <img src="images/vote.png" alt="Vote" style="position: fixed; bottom: 0; left: 0; width: 300px; height: 400px;">
+   </div>
+ 
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

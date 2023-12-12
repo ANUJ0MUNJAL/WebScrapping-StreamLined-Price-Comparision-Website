@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Price Comparison Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Ubuntu&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .container {
+      width: 400px;
+      margin: auto;
+      padding: 36px 48px 48px 48px;
+      background-color: #f2efee;
+
+      border-radius: 11px;
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    }
+
+    .login-title {
+      padding: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .login-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+    }
+
+    .login-form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 1.2rem;
+      border-radius: 9px;
+      border: none;
+    }
+
+    .login-form input:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+    }
+
+    .btn--form {
+      background-color: #f48982;
+      color: #fdf2e9;
+      align-self: end;
+      padding: 8px;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 9px;
+      border: none;
+
+      cursor: pointer;
+      font-family: inherit;
+
+      transition: all 0.3s;
+    }
+
+    button {
+      outline: 1px solid #f48982;
+    }
+
+    .btn--form:hover {
+      background-color: #fdf2e9;
+      color: #f48982;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="">Price Compare Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Contact</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">All About Prices</a></li>
+            <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <div class="row">
+
+        <div class="col-lg-6 ">
+
+          <h1 class="big-heading">Price Comparison Hub</h1>
+          <h2>Compare prices across various products and make informed purchase decisions. It's easy, quick, and free.</h2>
+          <a class="btn btn-dark btn-outline-light btn-lg downloadbutton" href="/register" role="button">New to the website?</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="container">
+            <h2 class="login-title">Log in</h2>
+
+            <form action="/login" method="POST" class="login-form">
+              <div>
+                <label for="email">Email </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="me@example.com"
+                  name="username"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="password">Password </label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="password"
+                  name="password"
+                  required
+                />
+              </div>
+
+              <button class="btn btn--form" type="submit" value="Log in">
+                Log in
+              </button>
+
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="anuj">
+      <img src="images/regist.png" alt="">
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="feature_p col-lg-4">
+          <i class="icon fa fa-check-circle fa-4x"></i>
+          <h3 class="feature-size">Cost Savings:</h3>
+          <p>Compare prices to find the best deals and save money on your purchases.</p>
+        </div>
+        <div class="feature_p col-lg-4">
+          <i class="icon fa fa-bullseye fa-4x"></i>
+          <h3 class="feature-size">Accessibility:</h3>
+          <p>Access price information for a wide range of products from the comfort of your home.</p>
+        </div>
+        <div class="feature_p col-lg-4">
+          <i class="icon fa fa-heart-o fa-4x"></i>
+          <h3 class="feature-size">Informed Decisions:</h3>
+          <p>Make informed purchase decisions by comparing prices and product details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+
+    <div id="carouselExampleControls" class="hellobhai carousel slide" data-ride="false">
+      <div class="carousel-inner wait">
+        <div class=" carousel-item  container-fluid">
+
+          <img class="check" src="images/Section.png" alt="">
+
+          <h3 class="test-size">Compare prices effortlessly and make smart choices. Our platform provides a seamless experience for finding the best deals on the products you love.</h2>
+        </div>
+        <div class="carousel-item active container-fluid">
+
+          <img class="check" src="images/Another.png" alt="">
+
+          <h3 class="testimonial-text test-size">Explore a wide range of products, compare prices from different retailers, and shop with confidence. Join our community of savvy shoppers today!</h3>
+
+
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- Press -->
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <h2 class="pricing-size">Find the best prices for your favorite products on Price Comparison Hub.</h2>
+    <p>Revolutionizing the way you make purchase decisions: Say goodbye to overpaying with our comprehensive price comparison.</p>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+    <div class="cta-item container-fluid">
+
+
+      <h3 class="cta-heading">Contact Us:-</h3>
+
+      <!-- ... (previous code) ... -->
+
+<div class="row">
+  <div class="pricing-item col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="small-size">Harsh Mudgil</h3>
+      </div>
+      <div class="card-body">
+        <a href="mailto:iamharshmudgil1263@gmail.com"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Send Email</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-item col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="small-size">Yuvraj Singh</h3>
+      </div>
+      <div class="card-body">
+        <a href="mailto:ysyuvraj.singh56@gmail.com"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Send Email</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-item col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="small-size">Anuj Munjal</h3>
+      </div>
+      <div class="card-body">
+        <a href="mailto:anujmunjal08@gmail.com"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Send Email</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-item col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="small-size">Abhishek </h3>
+      </div>
+      <div class="card-body">
+        <a href="mailto:abhishek.ranjan.39037@gmail.com"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Send Email</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ... (remaining code) ... -->
+
+      </div>
+
+
+    </div>
+    <div class="last">
+      <img src="images/project.png" alt="">
+    </div>
+  </section>
+
+</body>
+
+</html>
